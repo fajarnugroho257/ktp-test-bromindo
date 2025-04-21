@@ -88,6 +88,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/data-ktp-add-proses', [KtpController::class, 'store'])->name('addProcessDataKtp');
         Route::get('/data-ktp-edit/{ktp_nik}', [KtpController::class, 'show'])->name('editDataKtp');
         Route::put('/data-ktp-edit-proses/{ktp_nik}', [KtpController::class, 'update'])->name('editProcessDataKtp');
+        Route::get('/data-ktp-delete-process/{id}', [KtpController::class, 'destroy'])->name('deleteDataKtp');
+
         //
         Route::get('/data-ktp-download', [KtpController::class, 'download'])->name('dataKtpDownload');
         Route::get('/data-ktp-pdf', [KtpController::class, 'exportPdf'])->name('dataKtpPdf');

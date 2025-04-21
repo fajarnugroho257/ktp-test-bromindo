@@ -174,7 +174,7 @@
                                             <td class="text-center">
                                                 <a href="{{ route('editDataKtp', [$data->ktp_nik]) }}"
                                                     class="btn btn-sm btn-warning"><i class="fa fa-pen"></i></a>
-                                                <a href="{{ route('deleteUser', [$data->ktp_nik]) }}"
+                                                <a href="{{ route('deleteDataKtp', [$data->ktp_nik]) }}"
                                                     onclick="return confirm('Apakah anda yakin akan menghapus data ini ?')"
                                                     class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                             </td>

@@ -303,7 +303,16 @@ class KtpController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $detail = Ktp::where('ktp_nik', $id)->first();
+        if (empty($detail)) {
+            return redirect()->back()->with('error', "Data tidak ditemukan");
+        }
+        if ($detail->delete()) {
+            logActivity('Hapus KTP', 'User berhasil hapus data KTP');
+            return redirect()->back()->with('success', "Data berhasil dihapus");
+        } else {
+            return redirect()->back()->with('error', "Data gagal dihapus");
+        }
     }
 
     //
