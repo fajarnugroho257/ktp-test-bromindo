@@ -106,9 +106,9 @@ class MenuTableseeder extends Seeder
         ]);
         Menu::create([
             'menu_id' => 'M0013',
-            'app_heading_id' => 'H0004',
-            'menu_name' => 'Data Activity',
-            'menu_url' => 'dataActivity',
+            'app_heading_id' => 'H0005',
+            'menu_name' => 'Log Activity',
+            'menu_url' => 'logActivity',
             'menu_parent' => '0',
         ]);
         Menu::create([
