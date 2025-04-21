@@ -13,3 +13,6 @@ password : admin1
 PENGGUNA
 username : pengguna
 password : pengguna
+
+DATA KTP API
+http://127.0.0.1:8000/api/get-data-ktp
