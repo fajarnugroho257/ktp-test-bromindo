@@ -15,4 +15,3 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-!storage/app/templates/data_ktp_template.xlsx
