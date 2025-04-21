@@ -17,7 +17,7 @@ class KtpSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         //
-        foreach (range(1, 10) as $i) {
+        foreach (range(1, 10000) as $i) {
             // pekerjaan
             $pekerjaan = DB::table('pekerjaan')->inRandomOrder()->first();
             // kelurahan
