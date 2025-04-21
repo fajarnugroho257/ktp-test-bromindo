@@ -24,8 +24,8 @@ class UserTableseeder extends Seeder
             'user_id' => 'U0002',
             'name' => 'Admin',
             'role_id' => 'R0002',
-            'username' => 'admin',
-            'password' => bcrypt('admin'),
+            'username' => 'admin1',
+            'password' => bcrypt('admin1'),
         ]);
         User::create([
             'user_id' => 'U0003',

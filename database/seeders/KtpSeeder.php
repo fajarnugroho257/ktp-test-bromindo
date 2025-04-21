@@ -37,7 +37,7 @@ class KtpSeeder extends Seeder
             //
             $urutan = DB::table('ktp')
                 ->select('ktp_nik', DB::raw('SUBSTRING(ktp_nik, 1, 6) AS kode'), DB::raw('SUBSTRING(ktp_nik, -4, 4) AS urut'))
-                ->whereRaw('SUBSTRING(ktp_nik, 1, 12) = ?', [$kode_lokasi])
+                ->whereRaw('SUBSTRING(ktp_nik, 1, 12) = ?', [$kode_lokasi . $kode_tgl_lahir])
                 ->orderBy(DB::raw('SUBSTRING(ktp_nik, -4, 4)'), 'DESC')
                 ->first();
             if (!empty($urutan)) {

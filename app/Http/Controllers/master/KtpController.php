@@ -50,7 +50,7 @@ class KtpController extends Controller
             ->whereRelation('kelurahan', 'kelurahan_id', 'LIKE', $kelurahan)
             ->whereRelation('pekerjaan', 'pekerjaan_id', 'LIKE', $pekerjaan)
             ->orderBy('ktp_nama', 'ASC')
-            ->paginate(10)
+            ->paginate(100)
             ->appends($request->all());
         // referensi data
         $data['rs_prov'] = Provinsi::orderBy('provinsi_nama')->get();
